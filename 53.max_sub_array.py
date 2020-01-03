@@ -1,0 +1,3 @@
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        return (lambda max_sub_array, *args: max_sub_array(max_sub_array, *args))(lambda max_sub_array, index, cur_sum, max_sum: max_sum if index == len(nums) else max_sub_array(max_sub_array, index + 1, 0 if (next_sum := cur_sum + nums[index]) < 0 else next_sum, max(max_sum, next_sum)), 0, 0, 0) if (max_num := max(nums)) >= 0 else max_num

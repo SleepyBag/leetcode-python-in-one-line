@@ -1,0 +1,9 @@
+* Leetcode in One Line with Python
+
+I want to solve all the leetcode easy problems in one line with python. That's it.
+
+** Restrictions
+   - One line means "one expression", which means I'm not going to use ";" combining multiple lines into one.
+   - "exec" and "eval" are allowed. However, ";" is not allowed to be used in there arguments.
+
+If you have a solution better than mine, please feel free to report an issue, or start a PR.

@@ -4,6 +4,6 @@ I want to solve all the leetcode easy problems in one line with python. That's i
 
 ** Restrictions
    - One line means "one expression", which means I'm not going to use ";" combining multiple lines into one.
-   - "exec" and "eval" are allowed. However, ";" is not allowed to be used in there arguments.
+   - "exec" is not allowed so that I can't pack multiple expressions into an "exec" call.
 
 If you have a solution better than mine, please feel free to report an issue, or start a PR.

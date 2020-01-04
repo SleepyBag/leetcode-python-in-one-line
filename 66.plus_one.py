@@ -1,0 +1,3 @@
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        return (final_ans if (final_ans := (lambda plus_one, *args: plus_one(plus_one, *args))(lambda plus_one, index, ans: ans if ans.append((last := ans.pop()) % 10) or ans.append(last // 10 + (digits[index] if index != -1 else 0)) or index == -1 else plus_one(plus_one, index - 1, ans), len(digits) - 1, [10])[1:])[-1] else final_ans[: -1])[::-1]

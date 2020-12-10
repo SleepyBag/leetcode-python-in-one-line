@@ -7,4 +7,4 @@
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        return (lambda max_depth, *args: max_depth(max_depth, *args))((lambda max_depth, root: 0 if not root else 1 + max(max_depth(max_depth, root.left), max_depth(max_depth, root.right))), root)
+        return 0 if root is None else max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1

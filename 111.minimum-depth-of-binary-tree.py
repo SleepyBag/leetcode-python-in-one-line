@@ -1,3 +1,3 @@
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
-        return 0 if root is None else (lambda f, root: f(f, root))((lambda f, root: 1 if root is not None and root.left is None and root.right is None else min(f(f, root.left), f(f, root.right)) + 1 if root is not None else inf), root)
+        return 0 if root is None else 1 if root.left is None and root.right is None else min(self.minDepth(root.left) if root.left is not None else inf, self.minDepth(root.right) if root.right is not None else inf) + 1

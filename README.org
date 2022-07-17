@@ -1,6 +1,6 @@
 * Leetcode in One Line with Python
 
-I want to solve all the leetcode easy problems in one line with python. That's it.
+I want to solve Leetcode problems in one line with python. That's it.
 
 ** Restrictions
    - One line means "one expression", which means I'm not going to use ";" combining multiple lines into one.

@@ -1,0 +1,3 @@
+class Solution:
+    def minOperations(self, nums: List[int], numsDivide: List[int]) -> int:
+        return (lambda gcd: (lambda ans: -1 if ans == math.inf else ans)(min((i if gcd % n == 0 else math.inf) for i, n in enumerate(sorted(nums)))))(functools.reduce(math.gcd, numsDivide, numsDivide[0]))

@@ -1,0 +1,3 @@
+class Solution:
+    def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        return max(l[-1] - l[0] for l in (lambda record, solver: [solver((lambda dfs, record, node, depth, index: None if node is None else [dfs(dfs, record, node.left, depth + 1, index * 2), dfs(dfs, record, node.right, depth + 1, index * 2 + 1), record[depth].append(index)][0]), record, root, 0, 1), record][1])(collections.defaultdict(list), lambda func, *args: func(func, *args)).values()) + 1
